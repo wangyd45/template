@@ -1,0 +1,68 @@
+[OSEv3:children]
+masters
+etcd
+nodes
+lb
+
+[OSEv3:vars]
+ansible_ssh_user=root
+ansible_become=true
+deployment_type=origin
+
+
+#osm_image=registry.dataos.io/w_openshift/origin
+#osn_image=registry.dataos.io/w_openshift/node
+#osn_ovs_image=registry.dataos.io/w_openshift/openvswitch
+openshift_image_tag='v3.6.0'
+
+#oreg_url=registry.dataos.io/w_openshift/origin-${component}:${version}
+openshift_master_api_port=8443
+openshift_master_console_port=443
+osm_cluster_network_cidr=172.26.0.0/16
+openshift_portal_net=172.25.0.0/16
+osm_host_subnet_length=8
+enable_excluders=false
+
+osm_etcd_image=registry.dataos.io/w_openshift/etcd
+
+openshift_master_cluster_method=native
+openshift_master_cluster_hostname=10.19.14.22
+openshift_master_cluster_public_hostname=10.19.14.22
+
+openshift_disable_check=memory_availability,disk_availability,docker_storage,docker_image_availability
+
+openshift_enable_service_catalog=false
+
+openshift_hosted_metrics_deploy=true
+openshift_hosted_metrics_deployer_prefix=registry.dataos.io/w_openshift/origin-
+openshift_hosted_metrics_deployer_version=v3.6.0
+openshift_master_default_subdomain=hawkular-metrics.abc.dataos.io
+
+#openshift_hosted_metrics_public_url=https://hawkular-metrics.abc.dataos.io/hawkular/metrics
+
+
+openshift_hosted_logging_deploy=true
+openshift_hosted_logging_deployer_prefix=registry.dataos.io/w_openshift/origin-
+openshift_hosted_logging_deployer_version=v3.6.0
+openshift_hosted_logging_master_public_url=https://10.19.14.19:8443
+#openshift_logging_master_url=https://kubernetes.default.svc.cluster.local
+openshift_hosted_logging_hostname=kibana.log.abc.dataos.io
+
+
+[masters]
+10.19.14.19 containerized=true openshift_hostname=10.19.14.19 openshift_ip=10.19.14.19
+10.19.14.20 containerized=true openshift_hostname=10.19.14.20 openshift_ip=10.19.14.20
+10.19.14.21 containerized=true openshift_hostname=10.19.14.21 openshift_ip=10.19.14.21
+
+[etcd]
+10.19.14.19 containerized=true openshift_hostname=10.19.14.19 openshift_ip=10.19.14.19
+10.19.14.20 containerized=true openshift_hostname=10.19.14.20 openshift_ip=10.19.14.20
+10.19.14.21 containerized=true openshift_hostname=10.19.14.21 openshift_ip=10.19.14.21
+
+[lb]
+10.19.14.22 containerized=true openshift_hostname=10.19.14.22 openshift_ip=10.19.14.22
+
+[nodes]
+10.19.14.19 containerized=true openshift_schedulable=true openshift_hostname=10.19.14.19 openshift_ip=10.19.14.19 openshift_node_labels="{'region': 'infra', 'zone': 'default'}"
+10.19.14.20 containerized=true openshift_schedulable=true openshift_hostname=10.19.14.20 openshift_ip=10.19.14.20 openshift_node_labels="{'region': 'infra', 'zone': 'default'}"
+10.19.14.21 containerized=true openshift_schedulable=true openshift_hostname=10.19.14.21 openshift_ip=10.19.14.21 openshift_node_labels="{'region': 'infra', 'zone': 'default'}"

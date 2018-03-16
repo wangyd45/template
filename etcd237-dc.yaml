@@ -1,0 +1,81 @@
+# Please edit the object below. Lines beginning with a '#' will be ignored,
+# and an empty file will abort the edit. If an error occurs while saving this file will be
+# reopened with the relevant failures.
+#
+apiVersion: v1
+kind: DeploymentConfig
+metadata:
+  creationTimestamp: 2017-10-25T03:16:15Z
+  generation: 43
+  labels:
+    run: etcd237
+  name: etcd237
+  namespace: wangyd3
+  resourceVersion: "12990998"
+  selfLink: /oapi/v1/namespaces/wangyd3/deploymentconfigs/etcd237
+  uid: dc7ba74d-b932-11e7-8a5e-fa163e095b60
+spec:
+  replicas: 1
+  selector:
+    run: etcd237
+  strategy:
+    activeDeadlineSeconds: 21600
+    resources: {}
+    rollingParams:
+      intervalSeconds: 1
+      maxSurge: 25%
+      maxUnavailable: 25%
+      timeoutSeconds: 600
+      updatePeriodSeconds: 1
+    type: Rolling
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        run: etcd237
+    spec:
+      containers:
+      - command:
+        - /etcd
+        - -listen-client-urls
+        - http://0.0.0.0:2379
+        - -advertise-client-urls
+        - http://172.25.3.225:2379
+        image: registry.new.dataos.io/coreetcd/etcd
+        imagePullPolicy: IfNotPresent
+        name: etcd237
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+  test: false
+  triggers:
+  - type: ConfigChange
+status:
+  availableReplicas: 1
+  conditions:
+  - lastTransitionTime: 2018-03-16T03:56:47Z
+    lastUpdateTime: 2018-03-16T03:56:47Z
+    message: Deployment config has minimum availability.
+    status: "True"
+    type: Available
+  - lastTransitionTime: 2018-03-16T04:18:33Z
+    lastUpdateTime: 2018-03-16T04:18:33Z
+    message: replication controller "etcd237-19" has failed progressing
+    reason: ProgressDeadlineExceeded
+    status: "False"
+    type: Progressing
+  details:
+    causes:
+    - type: ConfigChange
+    message: config change
+  latestVersion: 19
+  observedGeneration: 43
+  readyReplicas: 1
+  replicas: 1
+  unavailableReplicas: 0
+  updatedReplicas: 0

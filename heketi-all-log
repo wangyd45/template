@@ -1,0 +1,335 @@
+[negroni] Started POST /volumes
+[heketi] DEBUG 2019/03/13 06:03:41 /src/github.com/heketi/heketi/apps/glusterfs/volume_entry.go:107: [80fa091c17ad45506e9a4f9b1e836d0a] Replica 3
+[heketi] DEBUG 2019/03/13 06:03:41 /src/github.com/heketi/heketi/apps/glusterfs/volume_entry.go:440: Using the following clusters: [871d6cd3f1504d506f5d86f6983261ce]
+[heketi] DEBUG 2019/03/13 06:03:41 /src/github.com/heketi/heketi/apps/glusterfs/volume_entry_allocate.go:43: brick_size = 2097152
+[heketi] DEBUG 2019/03/13 06:03:41 /src/github.com/heketi/heketi/apps/glusterfs/volume_entry_allocate.go:44: sets = 1
+[heketi] DEBUG 2019/03/13 06:03:41 /src/github.com/heketi/heketi/apps/glusterfs/volume_entry_allocate.go:45: num_bricks = 3
+[heketi] INFO 2019/03/13 06:03:41 Allocating brick set #0
+[heketi] DEBUG 2019/03/13 06:03:41 /src/github.com/heketi/heketi/apps/glusterfs/brick_allocate.go:249: 0 / 3
+[heketi] DEBUG 2019/03/13 06:03:41 /src/github.com/heketi/heketi/apps/glusterfs/device_entry.go:408: expected space needed for amount=2097152 snapFactor=1 : 2109440
+[heketi] DEBUG 2019/03/13 06:03:41 /src/github.com/heketi/heketi/apps/glusterfs/device_entry.go:365: device 052ef8626a21057801285f5edbf49ca6[104722432] > required size [2109440] ?
+[heketi] DEBUG 2019/03/13 06:03:41 /src/github.com/heketi/heketi/apps/glusterfs/brick_allocate.go:249: 1 / 3
+[heketi] DEBUG 2019/03/13 06:03:41 /src/github.com/heketi/heketi/apps/glusterfs/device_entry.go:408: expected space needed for amount=2097152 snapFactor=1 : 2109440
+[heketi] DEBUG 2019/03/13 06:03:41 /src/github.com/heketi/heketi/apps/glusterfs/device_entry.go:365: device 146613f58f92fc07810961a45aa0d47c[104722432] > required size [2109440] ?
+[heketi] DEBUG 2019/03/13 06:03:41 /src/github.com/heketi/heketi/apps/glusterfs/brick_allocate.go:249: 2 / 3
+[heketi] DEBUG 2019/03/13 06:03:41 /src/github.com/heketi/heketi/apps/glusterfs/device_entry.go:408: expected space needed for amount=2097152 snapFactor=1 : 2109440
+[heketi] DEBUG 2019/03/13 06:03:41 /src/github.com/heketi/heketi/apps/glusterfs/device_entry.go:365: device c4c12cd7cee956c60e04214f9f902470[104722432] > required size [2109440] ?
+[heketi] DEBUG 2019/03/13 06:03:41 /src/github.com/heketi/heketi/apps/glusterfs/volume_entry_allocate.go:480: Adding brick e8b39946260e6b6ed2d1163465707f54 to volume 80fa091c17ad45506e9a4f9b1e836d0a
+[heketi] DEBUG 2019/03/13 06:03:41 /src/github.com/heketi/heketi/apps/glusterfs/volume_entry_allocate.go:480: Adding brick 5e2e35b381a3e62f6733d6d5cc8dcbd3 to volume 80fa091c17ad45506e9a4f9b1e836d0a
+[heketi] DEBUG 2019/03/13 06:03:41 /src/github.com/heketi/heketi/apps/glusterfs/volume_entry_allocate.go:480: Adding brick 58d2263c6a0f33a893b72918bb1848e0 to volume 80fa091c17ad45506e9a4f9b1e836d0a
+[heketi] DEBUG 2019/03/13 06:03:41 /src/github.com/heketi/heketi/apps/glusterfs/volume_entry.go:323: Volume to be created on cluster 871d6cd3f1504d506f5d86f6983261ce
+[negroni] Completed 202 Accepted in 33.082082ms
+[asynchttp] INFO 2019/03/13 06:03:41 asynchttp.go:288: Started job 5fb41a3e48954f4cf3cf936f4d70d94a
+[heketi] INFO 2019/03/13 06:03:41 Started async operation: Create Volume
+[heketi] INFO 2019/03/13 06:03:41 Creating brick 58d2263c6a0f33a893b72918bb1848e0
+[heketi] INFO 2019/03/13 06:03:41 Creating brick 5e2e35b381a3e62f6733d6d5cc8dcbd3
+[heketi] INFO 2019/03/13 06:03:41 Creating brick e8b39946260e6b6ed2d1163465707f54
+[negroni] Started GET /queue/5fb41a3e48954f4cf3cf936f4d70d94a
+[negroni] Completed 200 OK in 238.243µs
+[cmdexec] DEBUG 2019/03/13 06:03:41 /src/github.com/heketi/heketi/pkg/utils/ssh/ssh.go:174: Host: 10.1.241.226:22 Command: /bin/bash -c 'mkdir -p /var/lib/heketi/mounts/vg_146613f58f92fc07810961a45aa0d47c/brick_5e2e35b381a3e62f6733d6d5cc8dcbd3'
+Result: 
+[cmdexec] DEBUG 2019/03/13 06:03:41 /src/github.com/heketi/heketi/pkg/utils/ssh/ssh.go:174: Host: 10.1.241.225:22 Command: /bin/bash -c 'mkdir -p /var/lib/heketi/mounts/vg_c4c12cd7cee956c60e04214f9f902470/brick_58d2263c6a0f33a893b72918bb1848e0'
+Result: 
+[cmdexec] DEBUG 2019/03/13 06:03:41 /src/github.com/heketi/heketi/pkg/utils/ssh/ssh.go:174: Host: 10.1.241.224:22 Command: /bin/bash -c 'mkdir -p /var/lib/heketi/mounts/vg_052ef8626a21057801285f5edbf49ca6/brick_e8b39946260e6b6ed2d1163465707f54'
+Result: 
+[cmdexec] DEBUG 2019/03/13 06:03:42 /src/github.com/heketi/heketi/pkg/utils/ssh/ssh.go:174: Host: 10.1.241.226:22 Command: /bin/bash -c 'lvcreate --autobackup=n --poolmetadatasize 12288K --chunksize 256K --size 2097152K --thin vg_146613f58f92fc07810961a45aa0d47c/tp_5e2e35b381a3e62f6733d6d5cc8dcbd3 --virtualsize 2097152K --name brick_5e2e35b381a3e62f6733d6d5cc8dcbd3'
+Result:   Logical volume "brick_5e2e35b381a3e62f6733d6d5cc8dcbd3" created.
+[negroni] Started GET /queue/5fb41a3e48954f4cf3cf936f4d70d94a
+[negroni] Completed 200 OK in 200.517µs
+[cmdexec] DEBUG 2019/03/13 06:03:42 /src/github.com/heketi/heketi/pkg/utils/ssh/ssh.go:174: Host: 10.1.241.224:22 Command: /bin/bash -c 'lvcreate --autobackup=n --poolmetadatasize 12288K --chunksize 256K --size 2097152K --thin vg_052ef8626a21057801285f5edbf49ca6/tp_e8b39946260e6b6ed2d1163465707f54 --virtualsize 2097152K --name brick_e8b39946260e6b6ed2d1163465707f54'
+Result:   Logical volume "brick_e8b39946260e6b6ed2d1163465707f54" created.
+[cmdexec] DEBUG 2019/03/13 06:03:42 /src/github.com/heketi/heketi/pkg/utils/ssh/ssh.go:174: Host: 10.1.241.225:22 Command: /bin/bash -c 'lvcreate --autobackup=n --poolmetadatasize 12288K --chunksize 256K --size 2097152K --thin vg_c4c12cd7cee956c60e04214f9f902470/tp_58d2263c6a0f33a893b72918bb1848e0 --virtualsize 2097152K --name brick_58d2263c6a0f33a893b72918bb1848e0'
+Result:   Logical volume "brick_58d2263c6a0f33a893b72918bb1848e0" created.
+[negroni] Started GET /queue/5fb41a3e48954f4cf3cf936f4d70d94a
+[negroni] Completed 200 OK in 295.654µs
+[cmdexec] DEBUG 2019/03/13 06:03:43 /src/github.com/heketi/heketi/pkg/utils/ssh/ssh.go:174: Host: 10.1.241.226:22 Command: /bin/bash -c 'mkfs.xfs -i size=512 -n size=8192 /dev/mapper/vg_146613f58f92fc07810961a45aa0d47c-brick_5e2e35b381a3e62f6733d6d5cc8dcbd3'
+Result: meta-data=/dev/mapper/vg_146613f58f92fc07810961a45aa0d47c-brick_5e2e35b381a3e62f6733d6d5cc8dcbd3 isize=512    agcount=8, agsize=65472 blks
+         =                       sectsz=512   attr=2, projid32bit=1
+         =                       crc=0        finobt=0
+data     =                       bsize=4096   blocks=523776, imaxpct=25
+         =                       sunit=64     swidth=64 blks
+naming   =version 2              bsize=8192   ascii-ci=0 ftype=0
+log      =internal log           bsize=4096   blocks=2560, version=2
+         =                       sectsz=512   sunit=64 blks, lazy-count=1
+realtime =none                   extsz=4096   blocks=0, rtextents=0
+[cmdexec] DEBUG 2019/03/13 06:03:43 /src/github.com/heketi/heketi/pkg/utils/ssh/ssh.go:174: Host: 10.1.241.226:22 Command: /bin/bash -c 'awk "BEGIN {print \"/dev/mapper/vg_146613f58f92fc07810961a45aa0d47c-brick_5e2e35b381a3e62f6733d6d5cc8dcbd3 /var/lib/heketi/mounts/vg_146613f58f92fc07810961a45aa0d47c/brick_5e2e35b381a3e62f6733d6d5cc8dcbd3 xfs rw,inode64,noatime,nouuid 1 2\" >> \"/etc/fstab\"}"'
+Result: 
+[cmdexec] DEBUG 2019/03/13 06:03:44 /src/github.com/heketi/heketi/pkg/utils/ssh/ssh.go:174: Host: 10.1.241.225:22 Command: /bin/bash -c 'mkfs.xfs -i size=512 -n size=8192 /dev/mapper/vg_c4c12cd7cee956c60e04214f9f902470-brick_58d2263c6a0f33a893b72918bb1848e0'
+Result: meta-data=/dev/mapper/vg_c4c12cd7cee956c60e04214f9f902470-brick_58d2263c6a0f33a893b72918bb1848e0 isize=512    agcount=8, agsize=65472 blks
+         =                       sectsz=512   attr=2, projid32bit=1
+         =                       crc=0        finobt=0
+data     =                       bsize=4096   blocks=523776, imaxpct=25
+         =                       sunit=64     swidth=64 blks
+naming   =version 2              bsize=8192   ascii-ci=0 ftype=0
+log      =internal log           bsize=4096   blocks=2560, version=2
+         =                       sectsz=512   sunit=64 blks, lazy-count=1
+realtime =none                   extsz=4096   blocks=0, rtextents=0
+[cmdexec] DEBUG 2019/03/13 06:03:44 /src/github.com/heketi/heketi/pkg/utils/ssh/ssh.go:174: Host: 10.1.241.225:22 Command: /bin/bash -c 'awk "BEGIN {print \"/dev/mapper/vg_c4c12cd7cee956c60e04214f9f902470-brick_58d2263c6a0f33a893b72918bb1848e0 /var/lib/heketi/mounts/vg_c4c12cd7cee956c60e04214f9f902470/brick_58d2263c6a0f33a893b72918bb1848e0 xfs rw,inode64,noatime,nouuid 1 2\" >> \"/etc/fstab\"}"'
+Result: 
+[cmdexec] DEBUG 2019/03/13 06:03:44 /src/github.com/heketi/heketi/pkg/utils/ssh/ssh.go:174: Host: 10.1.241.224:22 Command: /bin/bash -c 'mkfs.xfs -i size=512 -n size=8192 /dev/mapper/vg_052ef8626a21057801285f5edbf49ca6-brick_e8b39946260e6b6ed2d1163465707f54'
+Result: meta-data=/dev/mapper/vg_052ef8626a21057801285f5edbf49ca6-brick_e8b39946260e6b6ed2d1163465707f54 isize=512    agcount=8, agsize=65472 blks
+         =                       sectsz=512   attr=2, projid32bit=1
+         =                       crc=0        finobt=0
+data     =                       bsize=4096   blocks=523776, imaxpct=25
+         =                       sunit=64     swidth=64 blks
+naming   =version 2              bsize=8192   ascii-ci=0 ftype=0
+log      =internal log           bsize=4096   blocks=2560, version=2
+         =                       sectsz=512   sunit=64 blks, lazy-count=1
+realtime =none                   extsz=4096   blocks=0, rtextents=0
+[cmdexec] DEBUG 2019/03/13 06:03:44 /src/github.com/heketi/heketi/pkg/utils/ssh/ssh.go:174: Host: 10.1.241.224:22 Command: /bin/bash -c 'awk "BEGIN {print \"/dev/mapper/vg_052ef8626a21057801285f5edbf49ca6-brick_e8b39946260e6b6ed2d1163465707f54 /var/lib/heketi/mounts/vg_052ef8626a21057801285f5edbf49ca6/brick_e8b39946260e6b6ed2d1163465707f54 xfs rw,inode64,noatime,nouuid 1 2\" >> \"/etc/fstab\"}"'
+Result: 
+[cmdexec] DEBUG 2019/03/13 06:03:44 /src/github.com/heketi/heketi/pkg/utils/ssh/ssh.go:174: Host: 10.1.241.226:22 Command: /bin/bash -c 'mount -o rw,inode64,noatime,nouuid /dev/mapper/vg_146613f58f92fc07810961a45aa0d47c-brick_5e2e35b381a3e62f6733d6d5cc8dcbd3 /var/lib/heketi/mounts/vg_146613f58f92fc07810961a45aa0d47c/brick_5e2e35b381a3e62f6733d6d5cc8dcbd3'
+Result: 
+[cmdexec] DEBUG 2019/03/13 06:03:44 /src/github.com/heketi/heketi/pkg/utils/ssh/ssh.go:174: Host: 10.1.241.226:22 Command: /bin/bash -c 'mkdir /var/lib/heketi/mounts/vg_146613f58f92fc07810961a45aa0d47c/brick_5e2e35b381a3e62f6733d6d5cc8dcbd3/brick'
+Result: 
+[negroni] Started GET /queue/5fb41a3e48954f4cf3cf936f4d70d94a
+[negroni] Completed 200 OK in 224.924µs
+[cmdexec] DEBUG 2019/03/13 06:03:44 /src/github.com/heketi/heketi/pkg/utils/ssh/ssh.go:174: Host: 10.1.241.226:22 Command: /bin/bash -c 'chown :40000 /var/lib/heketi/mounts/vg_146613f58f92fc07810961a45aa0d47c/brick_5e2e35b381a3e62f6733d6d5cc8dcbd3/brick'
+Result: 
+[cmdexec] DEBUG 2019/03/13 06:03:44 /src/github.com/heketi/heketi/pkg/utils/ssh/ssh.go:174: Host: 10.1.241.226:22 Command: /bin/bash -c 'chmod 2775 /var/lib/heketi/mounts/vg_146613f58f92fc07810961a45aa0d47c/brick_5e2e35b381a3e62f6733d6d5cc8dcbd3/brick'
+Result: 
+[cmdexec] DEBUG 2019/03/13 06:03:44 /src/github.com/heketi/heketi/pkg/utils/ssh/ssh.go:174: Host: 10.1.241.225:22 Command: /bin/bash -c 'mount -o rw,inode64,noatime,nouuid /dev/mapper/vg_c4c12cd7cee956c60e04214f9f902470-brick_58d2263c6a0f33a893b72918bb1848e0 /var/lib/heketi/mounts/vg_c4c12cd7cee956c60e04214f9f902470/brick_58d2263c6a0f33a893b72918bb1848e0'
+Result: 
+[cmdexec] DEBUG 2019/03/13 06:03:44 /src/github.com/heketi/heketi/pkg/utils/ssh/ssh.go:174: Host: 10.1.241.224:22 Command: /bin/bash -c 'mount -o rw,inode64,noatime,nouuid /dev/mapper/vg_052ef8626a21057801285f5edbf49ca6-brick_e8b39946260e6b6ed2d1163465707f54 /var/lib/heketi/mounts/vg_052ef8626a21057801285f5edbf49ca6/brick_e8b39946260e6b6ed2d1163465707f54'
+Result: 
+[cmdexec] DEBUG 2019/03/13 06:03:44 /src/github.com/heketi/heketi/pkg/utils/ssh/ssh.go:174: Host: 10.1.241.225:22 Command: /bin/bash -c 'mkdir /var/lib/heketi/mounts/vg_c4c12cd7cee956c60e04214f9f902470/brick_58d2263c6a0f33a893b72918bb1848e0/brick'
+Result: 
+[cmdexec] DEBUG 2019/03/13 06:03:44 /src/github.com/heketi/heketi/pkg/utils/ssh/ssh.go:174: Host: 10.1.241.224:22 Command: /bin/bash -c 'mkdir /var/lib/heketi/mounts/vg_052ef8626a21057801285f5edbf49ca6/brick_e8b39946260e6b6ed2d1163465707f54/brick'
+Result: 
+[cmdexec] DEBUG 2019/03/13 06:03:44 /src/github.com/heketi/heketi/pkg/utils/ssh/ssh.go:174: Host: 10.1.241.224:22 Command: /bin/bash -c 'chown :40000 /var/lib/heketi/mounts/vg_052ef8626a21057801285f5edbf49ca6/brick_e8b39946260e6b6ed2d1163465707f54/brick'
+Result: 
+[cmdexec] DEBUG 2019/03/13 06:03:44 /src/github.com/heketi/heketi/pkg/utils/ssh/ssh.go:174: Host: 10.1.241.224:22 Command: /bin/bash -c 'chmod 2775 /var/lib/heketi/mounts/vg_052ef8626a21057801285f5edbf49ca6/brick_e8b39946260e6b6ed2d1163465707f54/brick'
+Result: 
+[cmdexec] DEBUG 2019/03/13 06:03:44 /src/github.com/heketi/heketi/pkg/utils/ssh/ssh.go:174: Host: 10.1.241.225:22 Command: /bin/bash -c 'chown :40000 /var/lib/heketi/mounts/vg_c4c12cd7cee956c60e04214f9f902470/brick_58d2263c6a0f33a893b72918bb1848e0/brick'
+Result: 
+[cmdexec] DEBUG 2019/03/13 06:03:45 /src/github.com/heketi/heketi/pkg/utils/ssh/ssh.go:174: Host: 10.1.241.225:22 Command: /bin/bash -c 'chmod 2775 /var/lib/heketi/mounts/vg_c4c12cd7cee956c60e04214f9f902470/brick_58d2263c6a0f33a893b72918bb1848e0/brick'
+Result: 
+[cmdexec] INFO 2019/03/13 06:03:45 Creating volume vol_80fa091c17ad45506e9a4f9b1e836d0a replica 3
+[cmdexec] DEBUG 2019/03/13 06:03:45 /src/github.com/heketi/heketi/pkg/utils/ssh/ssh.go:174: Host: 10.1.241.224:22 Command: /bin/bash -c 'gluster --mode=script volume create vol_80fa091c17ad45506e9a4f9b1e836d0a replica 3 10.1.241.224:/var/lib/heketi/mounts/vg_052ef8626a21057801285f5edbf49ca6/brick_e8b39946260e6b6ed2d1163465707f54/brick 10.1.241.226:/var/lib/heketi/mounts/vg_146613f58f92fc07810961a45aa0d47c/brick_5e2e35b381a3e62f6733d6d5cc8dcbd3/brick 10.1.241.225:/var/lib/heketi/mounts/vg_c4c12cd7cee956c60e04214f9f902470/brick_58d2263c6a0f33a893b72918bb1848e0/brick '
+Result: volume create: vol_80fa091c17ad45506e9a4f9b1e836d0a: success: please start the volume to access data
+[negroni] Started GET /queue/5fb41a3e48954f4cf3cf936f4d70d94a
+[negroni] Completed 200 OK in 290.973µs
+[negroni] Started GET /queue/5fb41a3e48954f4cf3cf936f4d70d94a
+[negroni] Completed 200 OK in 242.67µs
+[negroni] Started GET /queue/5fb41a3e48954f4cf3cf936f4d70d94a
+[negroni] Completed 200 OK in 245.071µs
+[cmdexec] DEBUG 2019/03/13 06:03:48 /src/github.com/heketi/heketi/pkg/utils/ssh/ssh.go:174: Host: 10.1.241.224:22 Command: /bin/bash -c 'gluster --mode=script volume start vol_80fa091c17ad45506e9a4f9b1e836d0a'
+Result: volume start: vol_80fa091c17ad45506e9a4f9b1e836d0a: success
+[heketi] INFO 2019/03/13 06:03:48 Create Volume succeeded
+[asynchttp] INFO 2019/03/13 06:03:48 asynchttp.go:292: Completed job 5fb41a3e48954f4cf3cf936f4d70d94a in 7.011588849s
+[negroni] Started GET /queue/5fb41a3e48954f4cf3cf936f4d70d94a
+[negroni] Completed 303 See Other in 136.414µs
+[negroni] Started GET /volumes/80fa091c17ad45506e9a4f9b1e836d0a
+[negroni] Completed 200 OK in 1.772783ms
+[negroni] Started GET /clusters/871d6cd3f1504d506f5d86f6983261ce
+[negroni] Completed 200 OK in 924.234µs
+[negroni] Started GET /nodes/42dc49e0ffe7dc420acee600c5602d8e
+[negroni] Completed 200 OK in 1.005974ms
+[negroni] Started GET /nodes/b3835648cd529ddb216b225ec84a05d0
+[negroni] Completed 200 OK in 1.349424ms
+[negroni] Started GET /nodes/b58e47dda57da8c686eae2c940956258
+[negroni] Completed 200 OK in 956.16µs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+init-device
+Setting up heketi database
+No database file found
+stat: cannot stat '/var/lib/heketi/heketi.db': No such file or directory
+Heketi v7.0.0-5-gc10cbd1-release-7
+[heketi] INFO 2019/03/13 05:44:02 Loaded ssh executor
+[heketi] INFO 2019/03/13 05:44:02 Adv: Min brick size 1 GB
+[heketi] INFO 2019/03/13 05:44:02 GlusterFS Application Loaded
+[heketi] INFO 2019/03/13 05:44:02 Started Node Health Cache Monitor
+Authorization loaded
+Listening on port 8080
+[heketi] INFO 2019/03/13 05:44:12 Starting Node Health Status refresh
+[heketi] INFO 2019/03/13 05:44:12 Cleaned 0 nodes from health cache
+[heketi] INFO 2019/03/13 05:46:02 Starting Node Health Status refresh
+[heketi] INFO 2019/03/13 05:46:02 Cleaned 0 nodes from health cache
+[heketi] INFO 2019/03/13 05:48:02 Starting Node Health Status refresh
+[heketi] INFO 2019/03/13 05:48:02 Cleaned 0 nodes from health cache
+[negroni] Started GET /clusters
+[negroni] Completed 200 OK in 2.954862ms
+[negroni] Started GET /clusters
+[negroni] Completed 200 OK in 355.314µs
+[negroni] Started POST /clusters
+[negroni] Completed 201 Created in 23.72899ms
+[negroni] Started POST /nodes
+
+
+
+[heketi] INFO 2019/03/13 05:48:57 Adding node 10.1.241.224
+[negroni] Completed 202 Accepted in 164.111754ms
+[asynchttp] INFO 2019/03/13 05:48:57 asynchttp.go:288: Started job 136d6f7adcf12b7f6c3d43efb571d895
+[negroni] Started GET /queue/136d6f7adcf12b7f6c3d43efb571d895
+[negroni] Completed 200 OK in 464.38µs
+[heketi] INFO 2019/03/13 05:48:57 Added node b58e47dda57da8c686eae2c940956258
+[asynchttp] INFO 2019/03/13 05:48:57 asynchttp.go:292: Completed job 136d6f7adcf12b7f6c3d43efb571d895 in 42.49203ms
+[negroni] Started GET /queue/136d6f7adcf12b7f6c3d43efb571d895
+[negroni] Completed 303 See Other in 303.213µs
+[negroni] Started GET /nodes/b58e47dda57da8c686eae2c940956258
+[negroni] Completed 200 OK in 552.035µs
+[negroni] Started POST /devices
+[heketi] INFO 2019/03/13 05:48:57 Adding device /dev/vdb1 to node b58e47dda57da8c686eae2c940956258
+[negroni] Completed 202 Accepted in 20.533605ms
+[asynchttp] INFO 2019/03/13 05:48:57 asynchttp.go:288: Started job a7c09caea5e5047b834c043bc23f176f
+[negroni] Started GET /queue/a7c09caea5e5047b834c043bc23f176f
+[negroni] Completed 200 OK in 392.914µs
+[cmdexec] DEBUG 2019/03/13 05:48:58 /src/github.com/heketi/heketi/pkg/utils/ssh/ssh.go:174: Host: 10.1.241.224:22 Command: /bin/bash -c 'pvcreate --metadatasize=128M --dataalignment=256K '/dev/vdb1''
+Result:   Physical volume "/dev/vdb1" successfully created
+[cmdexec] DEBUG 2019/03/13 05:48:58 /src/github.com/heketi/heketi/pkg/utils/ssh/ssh.go:174: Host: 10.1.241.224:22 Command: /bin/bash -c 'vgcreate --autobackup=n vg_052ef8626a21057801285f5edbf49ca6 /dev/vdb1'
+Result:   Volume group "vg_052ef8626a21057801285f5edbf49ca6" successfully created
+[cmdexec] DEBUG 2019/03/13 05:48:58 /src/github.com/heketi/heketi/pkg/utils/ssh/ssh.go:174: Host: 10.1.241.224:22 Command: /bin/bash -c 'vgdisplay -c vg_052ef8626a21057801285f5edbf49ca6'
+Result:   vg_052ef8626a21057801285f5edbf49ca6:r/w:772:-1:0:0:0:-1:0:1:1:104722432:4096:25567:0:25567:uFRBJ0-3zk3-dhva-bTDW-PQ1s-dkvF-h4zvN3
+[cmdexec] DEBUG 2019/03/13 05:48:58 /src/github.com/heketi/heketi/executors/cmdexec/device.go:147: Size of /dev/vdb1 in 10.1.241.224 is 104722432
+[heketi] INFO 2019/03/13 05:48:58 Added device /dev/vdb1
+[asynchttp] INFO 2019/03/13 05:48:58 asynchttp.go:292: Completed job a7c09caea5e5047b834c043bc23f176f in 543.76843ms
+[negroni] Started GET /queue/a7c09caea5e5047b834c043bc23f176f
+[negroni] Completed 204 No Content in 309.36µs
+[negroni] Started POST /devices
+[heketi] INFO 2019/03/13 05:48:59 Adding device /dev/vdb2 to node b58e47dda57da8c686eae2c940956258
+[negroni] Completed 202 Accepted in 57.541593ms
+[asynchttp] INFO 2019/03/13 05:48:59 asynchttp.go:288: Started job c2828798faed769a72d323ec365e3230
+[negroni] Started GET /queue/c2828798faed769a72d323ec365e3230
+[negroni] Completed 200 OK in 236.48µs
+[cmdexec] DEBUG 2019/03/13 05:48:59 /src/github.com/heketi/heketi/pkg/utils/ssh/ssh.go:174: Host: 10.1.241.224:22 Command: /bin/bash -c 'pvcreate --metadatasize=128M --dataalignment=256K '/dev/vdb2''
+Result:   Physical volume "/dev/vdb2" successfully created
+[cmdexec] DEBUG 2019/03/13 05:48:59 /src/github.com/heketi/heketi/pkg/utils/ssh/ssh.go:174: Host: 10.1.241.224:22 Command: /bin/bash -c 'vgcreate --autobackup=n vg_308fdf673e81ce2e5b02af219d679fd1 /dev/vdb2'
+Result:   Volume group "vg_308fdf673e81ce2e5b02af219d679fd1" successfully created
+[cmdexec] DEBUG 2019/03/13 05:48:59 /src/github.com/heketi/heketi/pkg/utils/ssh/ssh.go:174: Host: 10.1.241.224:22 Command: /bin/bash -c 'vgdisplay -c vg_308fdf673e81ce2e5b02af219d679fd1'
+Result:   vg_308fdf673e81ce2e5b02af219d679fd1:r/w:772:-1:0:0:0:-1:0:1:1:52293632:4096:12767:0:12767:Vn5tcN-0TE1-D0Km-VTXC-3OQl-g3W0-6cZwdp
+[cmdexec] DEBUG 2019/03/13 05:48:59 /src/github.com/heketi/heketi/executors/cmdexec/device.go:147: Size of /dev/vdb2 in 10.1.241.224 is 52293632
+[heketi] INFO 2019/03/13 05:48:59 Added device /dev/vdb2
+[asynchttp] INFO 2019/03/13 05:48:59 asynchttp.go:292: Completed job c2828798faed769a72d323ec365e3230 in 538.83516ms
+[negroni] Started GET /queue/c2828798faed769a72d323ec365e3230
+[negroni] Completed 204 No Content in 263.374µs
+[negroni] Started POST /nodes
+
+
+
+[heketi] INFO 2019/03/13 05:49:00 Adding node 10.1.241.225
+[negroni] Completed 202 Accepted in 129.212361ms
+[asynchttp] INFO 2019/03/13 05:49:00 asynchttp.go:288: Started job 2bb86c9b6718e172eb7398bce0c6445c
+[cmdexec] INFO 2019/03/13 05:49:00 Probing: 10.1.241.224 -> 10.1.241.225
+[negroni] Started GET /queue/2bb86c9b6718e172eb7398bce0c6445c
+[negroni] Completed 200 OK in 275.782µs
+[cmdexec] DEBUG 2019/03/13 05:49:00 /src/github.com/heketi/heketi/pkg/utils/ssh/ssh.go:174: Host: 10.1.241.224:22 Command: /bin/bash -c 'gluster peer probe 10.1.241.225'
+Result: peer probe: success. 
+[negroni] Started GET /queue/2bb86c9b6718e172eb7398bce0c6445c
+[negroni] Completed 200 OK in 275.503µs
+[heketi] INFO 2019/03/13 05:49:00 Added node b3835648cd529ddb216b225ec84a05d0
+[asynchttp] INFO 2019/03/13 05:49:00 asynchttp.go:292: Completed job 2bb86c9b6718e172eb7398bce0c6445c in 256.297492ms
+[negroni] Started GET /queue/2bb86c9b6718e172eb7398bce0c6445c
+[negroni] Completed 303 See Other in 289.353µs
+[negroni] Started GET /nodes/b3835648cd529ddb216b225ec84a05d0
+[negroni] Completed 200 OK in 728.71µs
+[negroni] Started POST /devices
+[heketi] INFO 2019/03/13 05:49:00 Adding device /dev/vdb1 to node b3835648cd529ddb216b225ec84a05d0
+[negroni] Completed 202 Accepted in 19.651491ms
+[asynchttp] INFO 2019/03/13 05:49:00 asynchttp.go:288: Started job 4fa6db5971d4e3fb1de1dee71ec115e1
+[negroni] Started GET /queue/4fa6db5971d4e3fb1de1dee71ec115e1
+[negroni] Completed 200 OK in 291.844µs
+[cmdexec] DEBUG 2019/03/13 05:49:00 /src/github.com/heketi/heketi/pkg/utils/ssh/ssh.go:174: Host: 10.1.241.225:22 Command: /bin/bash -c 'pvcreate --metadatasize=128M --dataalignment=256K '/dev/vdb1''
+Result:   Physical volume "/dev/vdb1" successfully created
+[cmdexec] DEBUG 2019/03/13 05:49:00 /src/github.com/heketi/heketi/pkg/utils/ssh/ssh.go:174: Host: 10.1.241.225:22 Command: /bin/bash -c 'vgcreate --autobackup=n vg_c4c12cd7cee956c60e04214f9f902470 /dev/vdb1'
+Result:   Volume group "vg_c4c12cd7cee956c60e04214f9f902470" successfully created
+[cmdexec] DEBUG 2019/03/13 05:49:01 /src/github.com/heketi/heketi/pkg/utils/ssh/ssh.go:174: Host: 10.1.241.225:22 Command: /bin/bash -c 'vgdisplay -c vg_c4c12cd7cee956c60e04214f9f902470'
+Result:   vg_c4c12cd7cee956c60e04214f9f902470:r/w:772:-1:0:0:0:-1:0:1:1:104722432:4096:25567:0:25567:2krDHv-L008-jrxp-XvkU-6kPO-Nfhd-etPwdg
+[cmdexec] DEBUG 2019/03/13 05:49:01 /src/github.com/heketi/heketi/executors/cmdexec/device.go:147: Size of /dev/vdb1 in 10.1.241.225 is 104722432
+[heketi] INFO 2019/03/13 05:49:01 Added device /dev/vdb1
+[asynchttp] INFO 2019/03/13 05:49:01 asynchttp.go:292: Completed job 4fa6db5971d4e3fb1de1dee71ec115e1 in 354.266951ms
+[negroni] Started GET /queue/4fa6db5971d4e3fb1de1dee71ec115e1
+[negroni] Completed 204 No Content in 203.676µs
+[negroni] Started POST /devices
+[heketi] INFO 2019/03/13 05:49:01 Adding device /dev/vdb2 to node b3835648cd529ddb216b225ec84a05d0
+[negroni] Completed 202 Accepted in 36.367425ms
+[asynchttp] INFO 2019/03/13 05:49:01 asynchttp.go:288: Started job 5b4987fc7b63b84be810298f12e826a7
+[negroni] Started GET /queue/5b4987fc7b63b84be810298f12e826a7
+[negroni] Completed 200 OK in 232.948µs
+[cmdexec] DEBUG 2019/03/13 05:49:01 /src/github.com/heketi/heketi/pkg/utils/ssh/ssh.go:174: Host: 10.1.241.225:22 Command: /bin/bash -c 'pvcreate --metadatasize=128M --dataalignment=256K '/dev/vdb2''
+Result:   Physical volume "/dev/vdb2" successfully created
+[cmdexec] DEBUG 2019/03/13 05:49:02 /src/github.com/heketi/heketi/pkg/utils/ssh/ssh.go:174: Host: 10.1.241.225:22 Command: /bin/bash -c 'vgcreate --autobackup=n vg_5a35b02fbb7bc2619546c5fcb0c07f41 /dev/vdb2'
+Result:   Volume group "vg_5a35b02fbb7bc2619546c5fcb0c07f41" successfully created
+[cmdexec] DEBUG 2019/03/13 05:49:02 /src/github.com/heketi/heketi/pkg/utils/ssh/ssh.go:174: Host: 10.1.241.225:22 Command: /bin/bash -c 'vgdisplay -c vg_5a35b02fbb7bc2619546c5fcb0c07f41'
+Result:   vg_5a35b02fbb7bc2619546c5fcb0c07f41:r/w:772:-1:0:0:0:-1:0:1:1:52293632:4096:12767:0:12767:y2cnz9-EQL2-QaF8-6izc-aeM3-X5ZG-R0ZUuO
+[cmdexec] DEBUG 2019/03/13 05:49:02 /src/github.com/heketi/heketi/executors/cmdexec/device.go:147: Size of /dev/vdb2 in 10.1.241.225 is 52293632
+[heketi] INFO 2019/03/13 05:49:02 Added device /dev/vdb2
+[asynchttp] INFO 2019/03/13 05:49:02 asynchttp.go:292: Completed job 5b4987fc7b63b84be810298f12e826a7 in 563.747324ms
+[negroni] Started GET /queue/5b4987fc7b63b84be810298f12e826a7
+[negroni] Completed 204 No Content in 339.627µs
+[negroni] Started POST /nodes
+
+
+
+[heketi] INFO 2019/03/13 05:49:02 Adding node 10.1.241.226
+[negroni] Completed 202 Accepted in 192.422487ms
+[asynchttp] INFO 2019/03/13 05:49:02 asynchttp.go:288: Started job b03fbd0d16cbf87dcf97d22c16779d60
+[cmdexec] INFO 2019/03/13 05:49:02 Probing: 10.1.241.225 -> 10.1.241.226
+[negroni] Started GET /queue/b03fbd0d16cbf87dcf97d22c16779d60
+[negroni] Completed 200 OK in 221.905µs
+[negroni] Started GET /queue/b03fbd0d16cbf87dcf97d22c16779d60
+[negroni] Completed 200 OK in 266.786µs
+[negroni] Started GET /queue/b03fbd0d16cbf87dcf97d22c16779d60
+[negroni] Completed 200 OK in 168.898µs
+[negroni] Started GET /queue/b03fbd0d16cbf87dcf97d22c16779d60
+[negroni] Completed 200 OK in 243.451µs
+[cmdexec] DEBUG 2019/03/13 05:49:03 /src/github.com/heketi/heketi/pkg/utils/ssh/ssh.go:174: Host: 10.1.241.225:22 Command: /bin/bash -c 'gluster peer probe 10.1.241.226'
+Result: peer probe: success. 
+[heketi] INFO 2019/03/13 05:49:03 Added node 42dc49e0ffe7dc420acee600c5602d8e
+[asynchttp] INFO 2019/03/13 05:49:03 asynchttp.go:292: Completed job b03fbd0d16cbf87dcf97d22c16779d60 in 928.032214ms
+[negroni] Started GET /queue/b03fbd0d16cbf87dcf97d22c16779d60
+[negroni] Completed 303 See Other in 288.16µs
+[negroni] Started GET /nodes/42dc49e0ffe7dc420acee600c5602d8e
+[negroni] Completed 200 OK in 591.717µs
+[negroni] Started POST /devices
+[heketi] INFO 2019/03/13 05:49:03 Adding device /dev/vdb1 to node 42dc49e0ffe7dc420acee600c5602d8e
+[negroni] Completed 202 Accepted in 49.522938ms
+[asynchttp] INFO 2019/03/13 05:49:03 asynchttp.go:288: Started job 453de4125505039a294b870b1fb12255
+[negroni] Started GET /queue/453de4125505039a294b870b1fb12255
+[negroni] Completed 200 OK in 222.023µs
+[cmdexec] DEBUG 2019/03/13 05:49:04 /src/github.com/heketi/heketi/pkg/utils/ssh/ssh.go:174: Host: 10.1.241.226:22 Command: /bin/bash -c 'pvcreate --metadatasize=128M --dataalignment=256K '/dev/vdb1''
+Result:   Physical volume "/dev/vdb1" successfully created
+[cmdexec] DEBUG 2019/03/13 05:49:04 /src/github.com/heketi/heketi/pkg/utils/ssh/ssh.go:174: Host: 10.1.241.226:22 Command: /bin/bash -c 'vgcreate --autobackup=n vg_146613f58f92fc07810961a45aa0d47c /dev/vdb1'
+Result:   Volume group "vg_146613f58f92fc07810961a45aa0d47c" successfully created
+[cmdexec] DEBUG 2019/03/13 05:49:04 /src/github.com/heketi/heketi/pkg/utils/ssh/ssh.go:174: Host: 10.1.241.226:22 Command: /bin/bash -c 'vgdisplay -c vg_146613f58f92fc07810961a45aa0d47c'
+Result:   vg_146613f58f92fc07810961a45aa0d47c:r/w:772:-1:0:0:0:-1:0:1:1:104722432:4096:25567:0:25567:k3PZz7-BVKu-zvd5-Sd1M-jnJN-q6rv-eElfZG
+[cmdexec] DEBUG 2019/03/13 05:49:04 /src/github.com/heketi/heketi/executors/cmdexec/device.go:147: Size of /dev/vdb1 in 10.1.241.226 is 104722432
+[heketi] INFO 2019/03/13 05:49:04 Added device /dev/vdb1
+[asynchttp] INFO 2019/03/13 05:49:04 asynchttp.go:292: Completed job 453de4125505039a294b870b1fb12255 in 331.26177ms
+[negroni] Started GET /queue/453de4125505039a294b870b1fb12255
+[negroni] Completed 204 No Content in 223.571µs
+[negroni] Started POST /devices
+[heketi] INFO 2019/03/13 05:49:05 Adding device /dev/vdb2 to node 42dc49e0ffe7dc420acee600c5602d8e
+[negroni] Completed 202 Accepted in 42.683685ms
+[asynchttp] INFO 2019/03/13 05:49:05 asynchttp.go:288: Started job 731982eddb7acb73b8049667b8dad8bd
+[negroni] Started GET /queue/731982eddb7acb73b8049667b8dad8bd
+[negroni] Completed 200 OK in 211.217µs
+[cmdexec] DEBUG 2019/03/13 05:49:05 /src/github.com/heketi/heketi/pkg/utils/ssh/ssh.go:174: Host: 10.1.241.226:22 Command: /bin/bash -c 'pvcreate --metadatasize=128M --dataalignment=256K '/dev/vdb2''
+Result:   Physical volume "/dev/vdb2" successfully created
+[cmdexec] DEBUG 2019/03/13 05:49:05 /src/github.com/heketi/heketi/pkg/utils/ssh/ssh.go:174: Host: 10.1.241.226:22 Command: /bin/bash -c 'vgcreate --autobackup=n vg_58fe503ccbe2949a6f5d877061f45c8e /dev/vdb2'
+Result:   Volume group "vg_58fe503ccbe2949a6f5d877061f45c8e" successfully created
+[cmdexec] DEBUG 2019/03/13 05:49:05 /src/github.com/heketi/heketi/pkg/utils/ssh/ssh.go:174: Host: 10.1.241.226:22 Command: /bin/bash -c 'vgdisplay -c vg_58fe503ccbe2949a6f5d877061f45c8e'
+Result:   vg_58fe503ccbe2949a6f5d877061f45c8e:r/w:772:-1:0:0:0:-1:0:1:1:52293632:4096:12767:0:12767:869wMo-euI6-93pO-Ge7r-wn2f-1rmW-G3wyOc
+[cmdexec] DEBUG 2019/03/13 05:49:05 /src/github.com/heketi/heketi/executors/cmdexec/device.go:147: Size of /dev/vdb2 in 10.1.241.226 is 52293632
+[heketi] INFO 2019/03/13 05:49:05 Added device /dev/vdb2
+[asynchttp] INFO 2019/03/13 05:49:05 asynchttp.go:292: Completed job 731982eddb7acb73b8049667b8dad8bd in 408.910168ms
+[negroni] Started GET /queue/731982eddb7acb73b8049667b8dad8bd
+[negroni] Completed 204 No Content in 226.837µs
+[negroni] Started GET /clusters/871d6cd3f1504d506f5d86f6983261ce
+[negroni] Completed 200 OK in 560.843µs
+[heketi] INFO 2019/03/13 05:50:02 Starting Node Health Status refresh
+[cmdexec] INFO 2019/03/13 05:50:02 Check Glusterd service status in node 10.1.241.226
